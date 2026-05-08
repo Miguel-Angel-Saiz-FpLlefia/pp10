@@ -38,7 +38,87 @@ CREATE TABLE IF NOT EXISTS questions (
 
 -- Insert Theory Modules
 INSERT INTO theory_modules (slug, title, content_html) VALUES
-('intro-ecommerce', 'Introducción al E-commerce y Shopify', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
+("Intro-shopify", "Introducción a Shopify", `<div class="max-w-4xl mx-auto my-12 p-8 bg-white shadow-xl rounded-lg">
+        
+        <header class="border-b-2 border-green-500 pb-6 mb-8">
+            <h1 class="text-4xl font-extrabold text-gray-900">
+                El Ecosistema del <span class="text-green-600">E-commerce: Shopify</span>
+            </h1>
+            <p class="mt-4 text-lg text-gray-600">
+                Basado en el análisis del modelo operativo de las plataformas modernas, 
+                <span class="font-semibold text-gray-800">Shopify</span> se define como una solución SaaS (Software as a Service).
+            </p>
+        </header>
+
+        <section class="mb-10">
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                <p class="text-gray-700">
+                    En términos sencillos, es un servicio <strong>"todo incluido"</strong> donde la empresa proveedora se encarga de toda la infraestructura técnica. A diferencia de Magento o WooCommerce, no requiere hosting externo ni mantenimiento manual de servidores.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <svg class="w-6 h-6 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Características Clave y Ventajas Competitivas
+            </h2>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead>
+                        <tr class="bg-gray-100 text-gray-700 uppercase text-sm leading-normal">
+                            <th class="py-3 px-6 text-left border-b">Característica</th>
+                            <th class="py-3 px-6 text-left border-b">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 text-sm font-light">
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-4 px-6 font-bold text-gray-800">Infraestructura gestionada</td>
+                            <td class="py-4 px-6">Shopify se ocupa de que todo funcione sin gestión técnica compleja por parte del usuario.</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-4 px-6 font-bold text-gray-800">Alta escalabilidad</td>
+                            <td class="py-4 px-6">Soporta desde volúmenes bajos hasta picos de 10,000 transacciones por minuto sin caídas.</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-4 px-6 font-bold text-gray-800">Seguridad</td>
+                            <td class="py-4 px-6">Certificación Nivel 1 PCI DSS; procesamiento de pagos seguro de forma nativa.</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="py-4 px-6 font-bold text-gray-800">Rendimiento (CDN Global)</td>
+                            <td class="py-4 px-6">Uso de Fastly y Cloudflare para optimizar la velocidad de carga global.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Resumen de Beneficios</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <li class="p-4 bg-green-50 rounded-lg border border-green-100 shadow-sm">
+                    <span class="block font-bold text-green-700 mb-1">Costos Bajos</span>
+                    Reducción de costos al eliminar mantenimiento de servidores.
+                </li>
+                <li class="p-4 bg-green-50 rounded-lg border border-green-100 shadow-sm">
+                    <span class="block font-bold text-green-700 mb-1">Foco en Negocio</span>
+                    Enfoque total en ventas y marketing, no en problemas técnicos.
+                </li>
+                <li class="p-4 bg-green-50 rounded-lg border border-green-100 shadow-sm">
+                    <span class="block font-bold text-green-700 mb-1">Confianza</span>
+                    Seguridad de estándar bancario para el consumidor final.
+                </li>
+            </ul>
+        </section>
+
+        <footer class="bg-gray-800 text-white p-6 rounded-lg text-center">
+            <p class="text-lg italic">
+                "Shopify se posiciona como una infraestructura robusta que permite a los negocios crecer de forma orgánica y segura en el mercado global."
+            </p>
+        </footer>
+
+    </div>`),('intro-ecommerce', 'Introducción al E-commerce y Shopify', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
             <h2 class=''text-2xl font-bold mb-4 text-gray-800''>El Ecosistema del E-commerce</h2>
             <p class=''mb-4''>El comercio electrónico moderno exige plataformas robustas. Shopify opera bajo un modelo <strong>SaaS (Software as a Service)</strong>. Esto significa que, a diferencia de Magento o WooCommerce (que requieren hosting, mantenimiento de servidores y actualizaciones de seguridad manuales), Shopify se encarga de toda la infraestructura.</p>
             <h3 class=''text-xl font-bold mb-2''>Ventajas Competitivas</h3>

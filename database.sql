@@ -525,17 +525,86 @@ INSERT INTO theory_modules (slug, title, content_html) VALUES
             </p>
         </div>
     </div>'),
-('productos-variantes', 'Productos y Variantes', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
-            <h2 class=''text-2xl font-bold mb-4 text-gray-800''>Estructura del Catálogo</h2>
-            <p class=''mb-4''>Cada producto en Shopify puede tener hasta <strong>3 opciones</strong> (ej. Tamaño, Color, Material) y un límite estricto de <strong>100 variantes</strong>.</p>
-            <h3 class=''text-xl font-bold mb-2''>Componentes de una Variante</h3>
-            <ul class=''list-disc pl-5 mb-4''>
-                <li><strong>SKU:</strong> Obligatorio para control de inventario.</li>
-                <li><strong>Barcode (GTIN/UPC):</strong> Necesario para integraciones con Google Shopping y Amazon.</li>
-                <li><strong>Inventory Item:</strong> Objeto que enlaza la variante con ubicaciones físicas.</li>
-            </ul>
-            <p>Si un producto requiere más de 100 variantes, debes usar apps de terceros (Product Options) o separar el producto usando Metaobjects.</p>
-        </div>'),
+('teoria-sobre-liquid', 'Teoria sobre liquid', '<div class="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100">
+        
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-900 to-indigo-800 p-8 text-white">
+            <h1 class="text-3xl font-bold">Arquitectura de Liquid</h1>
+            <p class="text-blue-200 mt-2 italic">Entendiendo el ciclo de renderizado en una infraestructura SaaS.</p>
+        </div>
+
+        <div class="p-8">
+            <!-- Cómo funciona el renderizado -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">El Ciclo de Renderizado</h2>
+                <div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-500">
+                    <p class="text-gray-700 leading-relaxed">
+                        Cuando un usuario visita una tienda, Shopify procesa el código Liquid en sus servidores antes de enviar nada al navegador. 
+                        Este proceso convierte las etiquetas dinámicas en HTML estático, lo que garantiza que el cliente nunca vea el código fuente del servidor, manteniendo la <strong>seguridad Nivel 1 PCI DSS</strong>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Tres Pilares Técnicos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-lg font-bold text-indigo-700 mb-2">1. Objetos (Data)</h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Son variables que contienen información de la tienda. Por ejemplo, el objeto <code>product</code> contiene el título, precio e imágenes que el <strong>CDN Global</strong> sirve rápidamente.
+                    </p>
+                    <div class="bg-gray-900 text-pink-400 p-3 rounded-md font-mono text-xs">
+                        {{ product.title }}
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-indigo-700 mb-2">2. Tags (Lógica)</h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Controlan el flujo del programa. Permiten crear bucles para listar productos o condiciones para mostrar contenido específico basándose en la <strong>escalabilidad</strong> del inventario[cite: 1].
+                    </p>
+                    <div class="bg-gray-900 text-blue-400 p-3 rounded-md font-mono text-xs">
+                        {% if product.available %} ... {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- El concepto de Filtros -->
+            <section class="mb-12">
+                <h3 class="text-lg font-bold text-indigo-700 mb-4">3. Filtros (Manipulación)</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                    Los filtros modifican la salida de los objetos. Son esenciales para formatear fechas, monedas o redimensionar imágenes que se distribuyen por la red de Fastly y Cloudflare[cite: 1].
+                </p>
+                <div class="bg-slate-100 p-4 rounded-lg flex items-center justify-between font-mono text-sm border border-slate-200">
+                    <span class="text-gray-500">Entrada: 10.5</span>
+                    <span class="text-indigo-600 font-bold">| money</span>
+                    <span class="text-green-600">Salida: $10.50</span>
+                </div>
+            </section>
+
+            <!-- Comparativa SaaS vs Tradicional -->
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                <h4 class="font-bold text-gray-800 mb-3 text-center">Liquid en el Ecosistema SaaS</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                        <p class="text-sm text-gray-600"><strong>Abstracción:</strong> Liquid evita que el desarrollador tenga que preocuparse por el mantenimiento de servidores o bases de datos[cite: 1].</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                        <p class="text-sm text-gray-600"><strong>Rendimiento:</strong> Al ser procesado nativamente por Shopify, aprovecha el <strong>CDN Global</strong> para minimizar la latencia[cite: 1].</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                        <p class="text-sm text-gray-600"><strong>Seguridad:</strong> No permite acceso directo al sistema de archivos, eliminando vulnerabilidades comunes en otras plataformas[cite: 1].</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-slate-900 p-4 text-center">
+            <p class="text-xs text-slate-500 tracking-widest uppercase">Arquitectura Liquid • Shopify Core 2026</p>
+        </div>
+    </div>'),
 ('colecciones-manuales', 'Colecciones Manuales', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
             <h2 class=''text-2xl font-bold mb-4 text-gray-800''>Curación de Productos</h2>
             <p class=''mb-4''>Las colecciones manuales permiten agrupar productos seleccionándolos uno por uno. Son ideales para:</p>

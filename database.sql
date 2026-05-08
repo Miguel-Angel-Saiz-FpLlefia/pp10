@@ -125,44 +125,318 @@ INSERT INTO theory_modules (slug, title, content_html) VALUES
         </footer>
 
     </div>'),
-    ('intro-ecommerce', 'Introducción al E-commerce y Shopify', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
-            <h2 class=''text-2xl font-bold mb-4 text-gray-800''>El Ecosistema del E-commerce</h2>
-            <p class=''mb-4''>El comercio electrónico moderno exige plataformas robustas. Shopify opera bajo un modelo <strong>SaaS (Software as a Service)</strong>. Esto significa que, a diferencia de Magento o WooCommerce (que requieren hosting, mantenimiento de servidores y actualizaciones de seguridad manuales), Shopify se encarga de toda la infraestructura.</p>
-            <h3 class=''text-xl font-bold mb-2''>Ventajas Competitivas</h3>
-            <ul class=''list-disc pl-5 mb-4''>
-                <li><strong>Escalabilidad:</strong> Soporta desde 1 hasta 10,000 transacciones por minuto sin caídas.</li>
-                <li><strong>Seguridad Nivel 1 PCI DSS:</strong> Todo el procesamiento de tarjetas está asegurado de forma nativa.</li>
-                <li><strong>CDN Global:</strong> Utiliza Fastly y Cloudflare para servir imágenes y código estático desde el servidor más cercano al cliente.</li>
-            </ul>
-        </div>'),
-('arquitectura-shopify', 'Arquitectura de Shopify', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
-            <h2 class=''text-2xl font-bold mb-4 text-gray-800''>Infraestructura Subyacente</h2>
-            <p class=''mb-4''>Shopify está construido principalmente sobre <strong>Ruby on Rails</strong> con bases de datos MySQL, aunque su arquitectura ha evolucionado hacia microservicios utilizando Go y Rust para componentes críticos de rendimiento.</p>
-            <h3 class=''text-xl font-bold mb-2''>Componentes Clave</h3>
-            <div class=''bg-gray-100 p-4 rounded mb-4''>
-                <p><strong>El Monolito Core:</strong> Gestiona la lógica de negocio principal, el checkout y la interfaz de administración.</p>
-                <p><strong>Storefront API:</strong> Capa GraphQL escrita en Go que sirve los datos a velocidades ultrarrápidas, utilizada por Hydrogen y aplicaciones móviles.</p>
+    ('crear-cuenta', 'Creando la cuenta de shopify', '<div class="max-w-4xl mx-auto my-12 p-8 bg-white shadow-xl rounded-lg">
+        
+        <!-- Encabezado -->
+        <header class="border-b-2 border-green-500 pb-6 mb-8 text-center">
+            <h1 class="text-4xl font-extrabold text-gray-900">
+                Cómo crear tu cuenta en <span class="text-green-600">Shopify</span>
+            </h1>
+            <p class="mt-4 text-lg text-gray-600">
+                Sigue estos pasos para lanzar tu infraestructura robusta y segura.
+            </p>
+        </header>
+
+        <!-- Pasos del Proceso -->
+        <div class="space-y-8">
+            
+            <!-- Paso 1 -->
+            <div class="flex items-start">
+                <div class="flex-shrink-0 bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                <div class="ml-6">
+                    <h3 class="text-xl font-bold text-gray-800">Registro Inicial</h3>
+                    <p class="text-gray-600 mt-2">
+                        Accede a la plataforma y haz clic en <strong>"Comenzar prueba gratuita"</strong>. Ingresa tu correo electrónico, crea una contraseña y define el nombre de tu tienda.
+                    </p>
+                </div>
             </div>
-            <p>Comprender esta arquitectura es vital para no saturar la API con llamadas ineficientes.</p>
-        </div>'),
-('planes-precios', 'Planes y Precios de Shopify', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
-            <h2 class=''text-2xl font-bold mb-4 text-gray-800''>Estructura de Costes</h2>
-            <p class=''mb-4''>Elegir el plan adecuado depende del volumen de ventas. Shopify ofrece:</p>
-            <ul class=''list-disc pl-5 mb-4 space-y-2''>
-                <li><strong>Basic:</strong> Ideal para empezar. Incluye 2 cuentas de empleado y comisiones de transacción más altas (aprox. 2.9% + 30¢ si no usas Shopify Payments).</li>
-                <li><strong>Shopify:</strong> Añade reportes profesionales y reduce la comisión.</li>
-                <li><strong>Advanced:</strong> Para negocios en crecimiento rápido. Mejores tasas y cálculo de envíos por terceros.</li>
-                <li><strong>Shopify Plus:</strong> Nivel Enterprise (desde ,000/mes). Incluye Checkout Extensibility, B2B, Launchpad y cuentas ilimitadas.</li>
-            </ul>
-        </div>'),
-('configuracion-inicial', 'Configuración Inicial de la Tienda', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
-            <h2 class=''text-2xl font-bold mb-4 text-gray-800''>Los Primeros Pasos</h2>
-            <p class=''mb-4''>Antes de añadir productos, la configuración base debe estar impecable. Esto incluye:</p>
-            <h3 class=''text-xl font-bold mb-2 text-indigo-700''>Ajustes Generales</h3>
-            <p class=''mb-4''>En <em>Configuración > Información de la tienda</em> debes definir el formato de moneda (con o sin decimales) y los prefijos de pedido (ej. #ESP-1001) para integrarlos correctamente con el ERP.</p>
-            <h3 class=''text-xl font-bold mb-2 text-indigo-700''>Políticas Legales</h3>
-            <p>Shopify permite generar plantillas automáticas para Política de Privacidad, Términos del Servicio y Política de Devoluciones. Estas páginas deben enlazarse obligatoriamente en el footer del tema por motivos legales.</p>
-        </div>'),
+
+            <!-- Paso 2 -->
+            <div class="flex items-start">
+                <div class="flex-shrink-0 bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                <div class="ml-6">
+                    <h3 class="text-xl font-bold text-gray-800">Configuración del Negocio</h3>
+                    <p class="text-gray-600 mt-2">
+                        Responde a las preguntas sobre tu industria y selecciona tu país. Esto es vital para que la infraestructura <strong>SaaS</strong> configure automáticamente impuestos y pasarelas de pago.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="flex items-start">
+                <div class="flex-shrink-0 bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                <div class="ml-6">
+                    <h3 class="text-xl font-bold text-gray-800">Selección de Plan</h3>
+                    <p class="text-gray-600 mt-2">
+                        Verifica tu correo y elige el plan que mejor se adapte a tu escala (Basic, Shopify o Advanced). Recuerda que Shopify garantiza <strong>Seguridad Nivel 1 PCI DSS</strong> en todos sus planes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="flex items-start">
+                <div class="flex-shrink-0 bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                <div class="ml-6">
+                    <h3 class="text-xl font-bold text-gray-800">Personalización y Lanzamiento</h3>
+                    <p class="text-gray-600 mt-2">
+                        Configura tu tema, agrega tus primeros productos y activa tus métodos de pago para aprovechar el <strong>CDN Global</strong> y ofrecer una carga rápida a tus clientes.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Alerta de Beneficio -->
+        <div class="mt-12 p-6 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <svg class="h-6 w-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-yellow-700 font-medium">
+                        <strong>Tip Pro:</strong> Al ser un modelo SaaS, no necesitas instalar nada en tu computadora. Todo se gestiona desde el panel de control en la nube.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón de Acción -->
+        <div class="mt-10 text-center">
+            <a href="#" class="inline-block px-8 py-3 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition duration-300 shadow-lg">
+                ¡Empezar ahora!
+            </a>
+        </div>
+
+    </div>'),
+('preparar-entorno', 'Preparando el entorno de shopify', '<div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
+        <!-- Header -->
+        <div class="bg-indigo-700 p-8 text-white">
+            <h1 class="text-3xl font-bold">Preparación del Entorno Local</h1>
+            <p class="text-indigo-100 mt-2 opacity-90">Guía técnica para desarrolladores: Shopify CLI + VS Code</p>
+        </div>
+
+        <div class="p-8">
+            <!-- Introducción -->
+            <p class="text-gray-600 mb-8 border-b pb-4">
+                Para extender la funcionalidad de Shopify más allá del panel de control, necesitamos conectar nuestra máquina local con la infraestructura <strong>SaaS</strong> de la tienda.
+            </p>
+
+            <!-- Pasos con Bloques de Código -->
+            <div class="space-y-8">
+                
+                <!-- Paso 1 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-indigo-700 flex items-center mb-3">
+                        <span class="bg-indigo-100 text-indigo-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm">1</span>
+                        Instalar Shopify CLI
+                    </h3>
+                    <p class="text-gray-600 mb-2 text-sm">Usa Node.js para instalar la interfaz de comandos global.</p>
+                    <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm text-green-400">
+                        npm install -g @shopify/cli @shopify/theme
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-indigo-700 flex items-center mb-3">
+                        <span class="bg-indigo-100 text-indigo-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm">2</span>
+                        Crear Proyecto Local (Dawn)
+                    </h3>
+                    <p class="text-gray-600 mb-2 text-sm">Clona el tema base estándar de Shopify para empezar a editar.</p>
+                    <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm text-green-400">
+                        shopify theme init mi-nuevo-tema
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-indigo-700 flex items-center mb-3">
+                        <span class="bg-indigo-100 text-indigo-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm">3</span>
+                        VS Code y Conexión
+                    </h3>
+                    <p class="text-gray-600 mb-2 text-sm">Abre la carpeta y vincula tu terminal con la URL de tu tienda.</p>
+                    <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm text-green-400">
+                        cd mi-nuevo-tema <br>
+                        code . <br>
+                        shopify auth login --store tu-tienda.myshopify.com
+                    </div>
+                </div>
+
+                <!-- Paso 4 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-indigo-700 flex items-center mb-3">
+                        <span class="bg-indigo-100 text-indigo-700 rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm">4</span>
+                        Servidor de Preview Local
+                    </h3>
+                    <p class="text-gray-600 mb-2 text-sm">Levanta un servidor local que sincroniza los cambios en tiempo real.</p>
+                    <div class="bg-gray-900 rounded-lg p-4 font-mono text-sm text-green-400">
+                        shopify theme dev
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Resumen Informativo -->
+            <div class="mt-10 p-5 bg-indigo-50 rounded-xl border border-indigo-100">
+                <h4 class="font-bold text-indigo-900 text-sm uppercase tracking-wider mb-2">¿Por qué es importante?</h4>
+                <ul class="text-sm text-indigo-800 space-y-2 list-disc pl-5">
+                    <li><strong>Sincronización:</strong> Los cambios se ven en una URL de preview segura antes de publicarse.</li>
+                    <li><strong>Eficiencia:</strong> Permite usar extensiones de VS Code para editar archivos Liquid.</li>
+                    <li><strong>Seguridad:</strong> No afecta la tienda en vivo hasta que decides hacer un <em>push</em>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-100 p-4 text-center text-xs text-gray-500 italic">
+            Entorno técnico configurado bajo estándares PCI DSS y optimizado para CDN Global.
+        </div>
+    </div>'),
+('crear-productos', 'Crear productos en Shopify', '<div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
+        <!-- Encabezado con estilo Shopify -->
+        <div class="bg-[#008060] p-6 text-white">
+            <h1 class="text-2xl font-bold flex items-center">
+                <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                Gestión de Inventario y Productos
+            </h1>
+        </div>
+
+        <div class="p-8">
+            <p class="text-gray-700 mb-6 italic">
+                Al añadir productos, Shopify utiliza su <strong>CDN Global</strong> para procesar y servir las imágenes rápidamente a nivel mundial.
+            </p>
+
+            <!-- Pasos de creación -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Paso 1 -->
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-green-500 transition-colors">
+                    <h3 class="font-bold text-gray-800 mb-2 underline decoration-green-500">1. Detalles Básicos</h3>
+                    <p class="text-sm text-gray-600">
+                        Ve a <strong>Productos > Agregar producto</strong>. Define el título, descripción optimizada para SEO y carga imágenes en alta resolución.
+                    </p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-green-500 transition-colors">
+                    <h3 class="font-bold text-gray-800 mb-2 underline decoration-green-500">2. Precios y Stock</h3>
+                    <p class="text-sm text-gray-600">
+                        Configura el precio, el costo por artículo y el SKU. Shopify se encarga de la <strong>escalabilidad</strong> para rastrear el inventario en tiempo real[cite: 1].
+                    </p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-green-500 transition-colors">
+                    <h3 class="font-bold text-gray-800 mb-2 underline decoration-green-500">3. Variantes</h3>
+                    <p class="text-sm text-gray-600">
+                        Si tu producto tiene tallas o colores, añade variantes. Cada una puede tener su propio precio, stock e imagen específica.
+                    </p>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="border border-gray-200 rounded-lg p-4 hover:border-green-500 transition-colors">
+                    <h3 class="font-bold text-gray-800 mb-2 underline decoration-green-500">4. Organización</h3>
+                    <p class="text-sm text-gray-600">
+                        Asigna el producto a una <strong>Colección</strong> y añade etiquetas (tags) para facilitar la búsqueda en el frontend del tema Dawn.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Nota Técnica -->
+            <div class="mt-8 bg-gray-50 p-6 rounded-lg border-l-4 border-green-600">
+                <h4 class="text-green-800 font-bold mb-2 uppercase text-xs tracking-widest">Dato Importante</h4>
+                <p class="text-sm text-gray-700">
+                    Gracias al modelo <strong>SaaS</strong>, no necesitas configurar bases de datos para tus productos; Shopify almacena y asegura toda la información bajo estándares <strong>PCI DSS</strong>[cite: 1].
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-100 p-4 text-center">
+            <button class="bg-[#008060] hover:bg-[#005e46] text-white font-bold py-2 px-6 rounded-md transition duration-300">
+                Guardar Producto
+            </button>
+        </div>
+    </div>'),
+('Colecciones', 'Las colecciones de Shopify', '<div class="max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-200">
+        
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-green-700 to-green-900 p-8 text-white">
+            <h1 class="text-3xl font-extrabold tracking-tight">Gestión de Colecciones</h1>
+            <p class="mt-2 text-green-100 opacity-90">Organiza tu inventario para mejorar la experiencia de usuario y el rendimiento del sitio.</p>
+        </div>
+
+        <div class="p-8">
+            <!-- Definición -->
+            <div class="mb-10">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <span class="w-2 h-8 bg-green-500 mr-3 rounded-full"></span>
+                    ¿Qué es una Colección?
+                </h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Es una herramienta de agrupación que permite clasificar productos por categorías (ej. "Ropa de Verano", "Ofertas"). Gracias al **CDN Global** de Shopify, las páginas de colección cargan de forma instantánea al servir las imágenes desde el punto más cercano al cliente.
+                </p>
+            </div>
+
+            <!-- Tipos de Colección -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div class="p-6 rounded-2xl bg-blue-50 border border-blue-100">
+                    <h3 class="font-bold text-blue-800 mb-2 font-mono">Tipo: Manual</h3>
+                    <p class="text-sm text-blue-700">Perfectas para curaciones específicas o lanzamientos exclusivos donde el control es total.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-purple-50 border border-purple-100">
+                    <h3 class="font-bold text-purple-800 mb-2 font-mono">Tipo: Automatizada</h3>
+                    <p class="text-sm text-purple-700">Utiliza la <strong>infraestructura gestionada</strong> para incluir productos automáticamente mediante reglas de filtrado[cite: 1].</p>
+                </div>
+            </div>
+
+            <!-- Pasos de Creación -->
+            <h2 class="text-xl font-bold text-gray-800 mb-6">Proceso de Creación</h2>
+            <div class="space-y-6">
+                <!-- Paso 1 -->
+                <div class="flex items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-2xl font-black text-gray-300 mr-6 italic">01</div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">Acceso</h4>
+                        <p class="text-sm text-gray-600">Navega a <strong>Productos > Colecciones</strong> y haz clic en "Crear colección".</p>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="flex items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-2xl font-black text-gray-300 mr-6 italic">02</div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">Identidad</h4>
+                        <p class="text-sm text-gray-600">Asigna un título atractivo y una imagen de portada optimizada para el tema local (como Dawn).</p>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="flex items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
+                    <div class="text-2xl font-black text-gray-300 mr-6 italic">03</div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">Configuración de Reglas</h4>
+                        <p class="text-sm text-gray-600">Si es automatizada, establece condiciones basadas en el inventario o etiquetas para mantener la <strong>escalabilidad</strong>[cite: 1].</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nota de Seguridad -->
+            <div class="mt-12 bg-yellow-50 p-6 rounded-2xl border-dashed border-2 border-yellow-200">
+                <p class="text-sm text-yellow-800 flex">
+                    <svg class="w-5 h-5 mr-2 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                    <strong>Seguridad PCI DSS:</strong> Toda la información de tus productos y colecciones está cifrada y protegida nativamente por la plataforma[cite: 1].
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-50 p-6 border-t border-gray-100 text-center">
+            <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Shopify SaaS Ecosystem 2026</p>
+        </div>
+    </div>'),
 ('gestion-dominios', 'Gestión de Dominios', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
             <h2 class=''text-2xl font-bold mb-4 text-gray-800''>Configuración DNS y SSL</h2>
             <p class=''mb-4''>Tu tienda incluye un dominio <em>.myshopify.com</em> gratuito que no debe indexarse en buscadores. Para conectar un dominio personalizado:</p>

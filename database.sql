@@ -1,3 +1,9 @@
+-- Limpiar datos antiguos para evitar errores de duplicados
+DROP TABLE IF EXISTS scores CASCADE;
+DROP TABLE IF EXISTS questions CASCADE;
+DROP TABLE IF EXISTS theory_modules CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,

@@ -1,24 +1,23 @@
-FROM php:8.2-apache
+FROM php:8.2-apache-bookworm
 
-# Install PostgreSQL client libraries
-RUN apt-get update && apt-get install -y libpq-dev \
+# Actualizamos e instalamos librerías necesarias con un fix para mirrors inestables
+RUN apt-get update --fix-missing && apt-get install -y libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql pdo_mysql \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Enable Apache Rewrite Module
+# Habilitar el módulo Rewrite de Apache
 RUN a2enmod rewrite
 
-# Set the working directory to the web root
+# Directorio de trabajo
 WORKDIR /var/www/html
 
-# Copy all files from the local directory to the container
-# We copy src content to the root for easier hosting or keep it as is
+# Copiamos el contenido de src a la raíz del servidor
 COPY src/ .
+# Copiamos el SQL un nivel por encima para que install.php lo encuentre
 COPY database.sql ../database.sql
 
-# Set correct permissions for Apache
+# Permisos para Apache
 RUN chown -R www-data:www-data /var/www/html
 
-# Expose port 80
 EXPOSE 80

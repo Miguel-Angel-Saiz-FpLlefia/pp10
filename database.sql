@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS questions (
 
 -- Insert Theory Modules
 INSERT INTO theory_modules (slug, title, content_html) VALUES
-("Intro-shopify", "Introducción a Shopify", `<div class="max-w-4xl mx-auto my-12 p-8 bg-white shadow-xl rounded-lg">
+('intro-shopify', 'Introducción a Shopify', '<div class="max-w-4xl mx-auto my-12 p-8 bg-white shadow-xl rounded-lg">
         
         <header class="border-b-2 border-green-500 pb-6 mb-8">
             <h1 class="text-4xl font-extrabold text-gray-900">
@@ -118,7 +118,8 @@ INSERT INTO theory_modules (slug, title, content_html) VALUES
             </p>
         </footer>
 
-    </div>`),('intro-ecommerce', 'Introducción al E-commerce y Shopify', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
+    </div>'),
+    ('intro-ecommerce', 'Introducción al E-commerce y Shopify', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
             <h2 class=''text-2xl font-bold mb-4 text-gray-800''>El Ecosistema del E-commerce</h2>
             <p class=''mb-4''>El comercio electrónico moderno exige plataformas robustas. Shopify opera bajo un modelo <strong>SaaS (Software as a Service)</strong>. Esto significa que, a diferencia de Magento o WooCommerce (que requieren hosting, mantenimiento de servidores y actualizaciones de seguridad manuales), Shopify se encarga de toda la infraestructura.</p>
             <h3 class=''text-xl font-bold mb-2''>Ventajas Competitivas</h3>

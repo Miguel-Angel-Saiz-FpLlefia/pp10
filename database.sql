@@ -437,15 +437,94 @@ INSERT INTO theory_modules (slug, title, content_html) VALUES
             <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Shopify SaaS Ecosystem 2026</p>
         </div>
     </div>'),
-('gestion-dominios', 'Gestión de Dominios', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
-            <h2 class=''text-2xl font-bold mb-4 text-gray-800''>Configuración DNS y SSL</h2>
-            <p class=''mb-4''>Tu tienda incluye un dominio <em>.myshopify.com</em> gratuito que no debe indexarse en buscadores. Para conectar un dominio personalizado:</p>
-            <pre class=''bg-gray-800 text-green-400 p-4 rounded mb-4''><code>
-Registro A   -> Apunta a la IP de Shopify (23.227.38.65)
-Registro CNAME -> Apunta a shops.myshopify.com (para el subdominio www)
-            </code></pre>
-            <p>Shopify genera automáticamente <strong>certificados SSL</strong> mediante Let''s Encrypt. Como desarrollador, asegúrate de forzar la redirección del tráfico HTTP a HTTPS marcando el dominio como ''Principal'' en el admin.</p>
-        </div>'),
+('liquid', 'liquid', '<div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
+        
+        <!-- Header -->
+        <div class="bg-slate-900 p-8 text-white">
+            <h1 class="text-3xl font-bold flex items-center">
+                <span class="text-blue-400 mr-3 italic">{ }</span> Liquid: El Motor de Shopify
+            </h1>
+            <p class="text-slate-400 mt-2">Personaliza el frontend de tu infraestructura SaaS con precisión técnica.</p>
+        </div>
+
+        <div class="p-8">
+            <!-- Conceptos Fundamentales -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                <div class="p-4 bg-orange-50 border-t-4 border-orange-400 rounded-lg text-center">
+                    <span class="text-2xl block mb-2">🏷️</span>
+                    <h3 class="font-bold text-orange-800">Objetos</h3>
+                    <p class="text-xs text-orange-700 mt-1">Envueltos en <code class="bg-orange-100 px-1">{{ }}</code>. Representan datos (ej. nombre del producto).</p>
+                </div>
+                <div class="p-4 bg-blue-50 border-t-4 border-blue-400 rounded-lg text-center">
+                    <span class="text-2xl block mb-2">⚙️</span>
+                    <h3 class="font-bold text-blue-800">Tags</h3>
+                    <p class="text-xs text-blue-700 mt-1">Envueltos en <code class="bg-blue-100 px-1">{% %}</code>. Lógica (if, for loops, asignaciones).</p>
+                </div>
+                <div class="p-4 bg-green-50 border-t-4 border-green-400 rounded-lg text-center">
+                    <span class="text-2xl block mb-2">🧪</span>
+                    <h3 class="font-bold text-green-800">Filtros</h3>
+                    <p class="text-xs text-green-700 mt-1">Usan el símbolo <code class="bg-green-100 px-1">|</code>. Modifican la salida (ej. cambiar moneda).</p>
+                </div>
+            </div>
+
+            <!-- Cómo modificar cosas -->
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">¿Cómo modificar tu tienda?</h2>
+            
+            <div class="space-y-6">
+                <!-- Método 1 -->
+                <div class="flex items-start bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="bg-blue-600 text-white p-3 rounded-lg mr-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Vía Editor Visual</h4>
+                        <p class="text-sm text-slate-600 mt-1">Para cambios estéticos rápidos en temas como <strong>Dawn</strong> sin tocar código.</p>
+                    </div>
+                </div>
+
+                <!-- Método 2 -->
+                <div class="flex items-start bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="bg-purple-600 text-white p-3 rounded-lg mr-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Vía Edición de Código (Liquid)</h4>
+                        <p class="text-sm text-slate-600 mt-1">Accediendo a <strong>Tienda Online > Temas > Editar código</strong> para modificar archivos <code class="text-pink-600">.liquid</code>.</p>
+                    </div>
+                </div>
+
+                <!-- Método 3 -->
+                <div class="flex items-start bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="bg-green-600 text-white p-3 rounded-lg mr-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">Vía Shopify CLI</h4>
+                        <p class="text-sm text-slate-600 mt-1">Uso de <strong>shopify theme dev</strong> para previsualizar cambios locales antes de subirlos a la nube del CDN Global.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejemplo Práctico -->
+            <div class="mt-10">
+                <h4 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-3 text-center">Ejemplo de código Liquid</h4>
+                <div class="bg-slate-900 rounded-2xl p-6 font-mono text-sm shadow-inner">
+                    <p class="text-green-400">{% <span class="text-blue-400">if</span> product.available %}</p>
+                    <p class="text-white ml-6">&lt;span class="badge"&gt;¡En stock!&lt;/span&gt;</p>
+                    <p class="text-green-400">{% <span class="text-blue-400">else</span> %}</p>
+                    <p class="text-white ml-6">&lt;span class="alert"&gt;Agotado&lt;/span&gt;</p>
+                    <p class="text-green-400">{% <span class="text-blue-400">endif</span> %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-slate-50 p-6 text-center border-t border-slate-100">
+            <p class="text-xs text-slate-400">
+                Aprovecha la <strong>Escalabilidad</strong> y el <strong>Rendimiento</strong> de Shopify mediante el uso eficiente de Liquid[cite: 1].
+            </p>
+        </div>
+    </div>'),
 ('productos-variantes', 'Productos y Variantes', '<div class=''text-gray-700 leading-relaxed max-w-4xl''>
             <h2 class=''text-2xl font-bold mb-4 text-gray-800''>Estructura del Catálogo</h2>
             <p class=''mb-4''>Cada producto en Shopify puede tener hasta <strong>3 opciones</strong> (ej. Tamaño, Color, Material) y un límite estricto de <strong>100 variantes</strong>.</p>
